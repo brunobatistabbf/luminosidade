@@ -22,9 +22,9 @@ potencia_lampadas['media'] = fuzz.trimf(potencia_lampadas.universe, [25, 50, 75]
 potencia_lampadas['alta'] = fuzz.trimf(potencia_lampadas.universe, [50, 100, 100])
 
 #Regras
-regra1 = ctrl.Rule(luz_natural['escuro'] & luminosidade_desejada['baixa'], potencia_lampadas['alta'])
+regra1 = ctrl.Rule(luz_natural['escuro'] & luminosidade_desejada['alta'], potencia_lampadas['alta'])
 regra2 = ctrl.Rule(luz_natural['escuro'] & luminosidade_desejada['media'], potencia_lampadas['media'])
-regra3 = ctrl.Rule(luz_natural['escuro'] & luminosidade_desejada['alta'], potencia_lampadas['baixa'])
+regra3 = ctrl.Rule(luz_natural['escuro'] & luminosidade_desejada['baixa'], potencia_lampadas['baixa'])
 regra4 = ctrl.Rule(luz_natural['claro'] & luminosidade_desejada['baixa'], potencia_lampadas['baixa'])
 regra5 = ctrl.Rule(luz_natural['claro'] & luminosidade_desejada['media'], potencia_lampadas['media'])
 regra6 = ctrl.Rule(luz_natural['claro'] & luminosidade_desejada['alta'], potencia_lampadas['alta'])
